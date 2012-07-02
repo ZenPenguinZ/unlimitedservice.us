@@ -1,0 +1,367 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+
+$default-box-shadow-color		:#aaa;/* The default color for box shadows */
+$default-box-shadow-h-offset	:10px;		/* The default horizontal offset. Positive is to the right. */
+$default-box-shadow-v-offset	:10px;		/* The default vertical offset. Positive is down. */
+$default-box-shadow-blur		:5px;		/* The default blur length. */
+$default-box-shadow-spread		:false;	/* The default spread length. */
+$default-box-shadow-inset		:false;	/* The default shadow inset: inset or false (for standard shadow).  */
+/* ========================================================================== ===
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+$ublue :#1b2676 ;
+$ured  :#911a42 ;
+$lighten:20;
+$rad : 12px ;
+$pad	:5%;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+h2 {font-size: 150%; color:$ured; }
+::-moz-selection { background: $ublue; color: #fff; text-shadow: none; }
+::selection { background: $ublue; color: #fff; text-shadow: none; }
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+/* rounded Corner stuff */
+.border-radius {
+  width: 125px;
+  height: 125px;
+  background: $ublue;
+  margin: 20px;
+  float: left;
+  padding: 5px; }
+ 
+#border-radius {
+  @include border-radius(25px);
+}
+#h-gradient {
+  @include background-image(linear-gradient(left, white, $ublue)); }
+
+
+/* ===== Initializr Styles =====================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
+
+.wrapper{
+	width:90%;
+	margin:0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+#header-container, #footer-container, #main aside{
+	border-top: 20px solid lighten($ublue,10%);
+	@include border-radius($rad, $rad);
+/*	@include background-image(linear-gradient(lighten($ublue,10%), $ublue));*/
+	background:$ublue;
+}
+
+
+
+#title{ color:white; }
+
+::-moz-selection { background: $ured; color: #fff; text-shadow: none; }
+::selection      { background: $ured; color: #fff; text-shadow: none; }
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav a{
+	display:block;
+	margin-bottom:10px;
+	padding:15px 5%;
+	background-color: $ured;
+	/* @include background-image(linear-gradient(top, $ured, red)); */
+	@include border-radius($rad, $rad);
+	color:white;
+	text-align:center;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+nav a:hover, nav a:visited{
+	color:white;
+}
+
+nav a:hover{
+	text-decoration:underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+#main{
+	padding:30px 0;
+}
+
+#main article h1{
+	font-size:2em;
+	font-weight: bolder;
+}
+.left_col{
+	width: 100%;	
+}
+.right_col{
+	display: none;
+	width: 100%;
+}
+#main aside{
+	color:white;
+	padding:0px 5% 10px;
+	h1{font-size: 1.5em;
+		font-weight: bold;
+		margin-top: 5%;
+	
+	}
+}
+
+#footer-container footer{
+	color:white;
+	padding:20px 5%;
+}
+
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+   .ie7 #title{ padding-top:20px; }
+
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+.address{
+	padding: 10px 14px;
+	margin-bottom: 1.5em;
+	background-color: lightgray;
+	@include border-radius($rad, $rad);
+	@include box-shadow();
+}
+.phone{
+	font-weight: bold;
+	text-align: center;
+}
+#mobile{
+	visibility: visible;
+}
+#not_mobile{
+	visibility: hidden;
+}
+#header-container img{
+		width: 98%;
+		margin: 0 1% 4%;
+	
+	}
+#logo_img{
+	max-width: 100%;
+	display: block;
+}
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+	
+	nav a{
+		float:left;
+		width:27%;
+		margin:0 1.7%;
+		padding:25px 2%;
+		margin-bottom:5%;
+	}
+	
+	nav li:first-child a{ margin-left:0;  }
+	nav li:last-child  a{ margin-right:0; }
+	
+#header-container, #footer-container,#main aside{
+		@include box-shadow();
+}
+#header-container, #footer-container{
+	width: 96%;
+	margin: 1% 2%;
+}
+#header-container img{
+		width: 90%;
+		margin: 0 5% 5%;
+	
+	}
+
+	.left_col{
+		width: 50%;
+		float: left;	
+	}
+	.right_col{
+		display: block;
+		width: 50%;
+		float: right;
+	}
+	#mobile{
+	visibility: hidden;;
+	}
+	#not_mobile{
+		visibility:visible;;
+	}
+	/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+	nav ul li{
+		display:inline;
+	}	
+	.oldie nav a{
+		margin:0 0.7%;		
+	}
+#logo_img{
+
+		width: 100%;
+	}
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+
+
+/* ============
+    WIDE: Menu
+   ============ */
+	
+#logo_img{
+
+		width: 62%;
+		float:left;
+	}
+
+	nav{
+		float:right;
+		width:38%;
+	}
+
+/* ============
+    WIDE: Main
+   ============ */
+
+	#main article{
+		float:left;
+		width:57%;
+	}
+		
+	#main aside{
+		float:right;
+		width:28%;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+	.wrapper{
+		width:1026px; /* 1140px - 10% for margins */
+		margin:0 auto;
+	}
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
